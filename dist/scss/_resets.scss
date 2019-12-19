@@ -1,0 +1,12 @@
+@import './variables';
+
+*{
+    background: $dark1;
+    font-family: 'Roboto', sans-serif;
+    color: $primary;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.5vw;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bitmex Position Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./css/main.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="heading">
+      <h1>Bitmex Position Calculator</h1>
+      <p>Risk Management tool for all trading pairs on Bitmex</p>
+    </header>
+  
+    <div class="container">
+      <nav class="navig-bar">
+        <ul>
+          <li><button autofocus>BITCOIN</button></li>
+          <li><button>ETHEREUM</button></li>
+          <li><button>BCH</button></li>
+          <li><button>RIPPLE</button></li>
+          <li><button>LITECOIN</button></li>
+          <li><button>EOS</button></li>
+          <li><button>CARDANO</button></li>
+          <li><button>TRON</button></li>
+          <li><button>UP/DOWN</button></li>
+        </ul>
+      </nav>
+
+      <form action="" method="POST" class="form-container">
+        <div class="card">
+          <h3 class="card-title">Enter Info</h3>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="options" id="BTC">
+              <input type="radio" name=BTC value = "XBTUSD" checked><label for="tabcontent">Perpetual</label>
+              <input type="radio" name=BTC value = "XBTU19"><label for="tabcontent">XBTU19</label>
+              <input type="radio" name=BTC value = "XBTZ19"><label for="tabcontent">XBTZ19</label>
+            </div>
+            <div class="options hidden" id="ETH">
+              <input type="radio" name=ETH value = "ETHUSD" checked><label for="tabcontent">Perpetual</label>
+              <input type="radio" name=ETH value = "ETHU19"><label for="tabcontent">ETHU19</label>
+            </div>
+            <div class="options hidden" id="BCH"><input type="hidden" value="BCHU19"><br></div>
+            <div class="options hidden" id="XRP"><input type="hidden" value="XRPU19"><br></div>
+            <div class="options hidden" id="EOS"><input type="hidden" value="EOSU19"><br></div>
+            <div class="options hidden" id="LTC"><input type="hidden" value="LTCU19"><br></div>
+            <div class="options hidden" id="ADA"><input type="hidden" value="ADAU19"><br></div>
+            <div class="options hidden" id="TRX"><input type="hidden" value="TRXU19"><br></div>
+            <div class="options hidden" id="U&D">
+              <input type="radio" name=U&D value = "XBT7D_U105" checked><label for="tabcontent">UP</label>
+              <input type="radio" name=U&D value = "XBT7D_D95"><label for="tabcontent">DOWN</label>
+            </div>
+          </div>
+      
+          <div class="form-label">
+            <div class="form-label-group">
+              <input min="0" step="0.0001" type="number" name="BTC Capital" placeholder="BTC Capital" required>
+            </div>
+            <div class="form-label-group">
+              <input min="0" step="0.5" type="number" name="Entry Price" placeholder="Entry Price" required>
+            </div>
+            <div class="form-label-group">
+              <input min="0" step="0.5" type="number" name="Stop Loss" placeholder="Stop Loss" required>
+            </div>
+            <div class="form-label-group">
+              <input min="0" step="0.5" type="number" name="Exit Price" placeholder="Exit Price" required>
+            </div>
+            <div class="form-label-group">
+              <input min="0" step="0.1" type="number" name="Risk in %" placeholder="Risk in %" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Output</h3>
+          <div class="form-label-group">
+            <output type="number" name="Position Size">
+              <label for="Position Size">Position Size</label>
+            </output>
+          </div>
+          <div class="form-label-group">
+            <output type="number" name="Profit %">
+              <label for="Profit %">Profit %</label>
+            </output>
+          </div>
+          <div class="btn">
+            <button type="submit">CALCULATE</button>
+            <button type="reset">RESET</button>
+          </div>
+          
+        </div>
+      </form>
+    </div>
+  
+    <footer class="footing">
+      <p>&copy; Ghazni</p>
+    </footer>
+  </div>  
+</body>
+<script src="./js/hide_switch.js"></script>
+
+</html>
