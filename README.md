@@ -1,7 +1,7 @@
 # BitmexPositionCalculator-WebBased    
-  
+   
 This project is under development.    
-  
+   
 It has been designed using HTML, CSS, & javascript.     
 The aim of this project is to provide proper Risk Management to traders on Bitmex.    
 This app takes these variables as input:-    
@@ -9,7 +9,8 @@ This app takes these variables as input:-
   2. Entry Price   
   3. Stop Loss   
   4. Exit Price   
-  5. Risk in %     
+  5. Risk in %   
+  
 Then it interacts with the Bitmex Rest API to get the latest price.  
 Then it calculates and outputs the following:-    
   1. Posoition Size    
